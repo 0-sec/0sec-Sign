@@ -37,8 +37,8 @@ jobs:
         EwechatAppSecrets:${{secrets.EwechatAppSecrets}}
         VcUser:${{secrets.VcUser}}
         VcPass:${{secrets.VcPass}}
-        0sWU:${{secrets.0sWU}}
-        0sWP:${{secrets.0sWP}}
+        0secWiikUser:${{secrets.0secWiikUser}}
+        0secWiikPass:${{secrets.0secWiikPass}}
     - name: Run
       run: |
         python3 0secSign.py
