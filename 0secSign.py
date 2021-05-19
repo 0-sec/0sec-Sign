@@ -3,43 +3,46 @@
 import requests
 import base64
 import json
+import os
 
 base64_image = ''
 base64_uuid = ''
 
 #验证码账号密码http://api.ttshitu.com
-VcUser = ''
-VcPass = ''
+VcUser  = os.environ["VcUser"]
+VcPass  = os.environ["VcPass"]
+
 #文库账号密码
-ZsecWikiUser = ''
-ZsecWikiPass = ''
+ZsecWikiUser  = os.environ["ZsecWikiUser"]
+
+ZsecWikiPass  = os.environ["ZsecWikiPass"]
 
 
 # 推送类型
-pushType = ''  # telegram|ftpush|bark|enterprise_wechat|dingtalk
+pushType  = os.environ["pushType"]  # telegram|ftpush|bark|enterprise_wechat|dingtalk
 
 # 钉钉推送
-DingtalkAccessToken = ''  # 创建webhook机器人时的access_token
+DingtalkAccessToken = os.environ["DingtalkAccessToken"]  # 创建webhook机器人时的access_token
 
 
 # 方糖推送
-FTServerKey = ''  # 方糖 Server酱申请的skey
+FTServerKey = os.environ["FTServerKey"]  # 方糖 Server酱申请的skey
 
 # Telegram推送配置
-TelegramToken = ''  # telegram token
-TelegramChadId = ''  # telegram token
+TelegramToken = os.environ["TelegramToken"]  # telegram token
+TelegramChadId = os.environ["TelegramChadId"]  # telegram token
 
 # Bark推送配置
-BarkToken = ''  # Bark Token
-BarkServer = ''  # BarkServer
+BarkToken = os.environ["BarkToken"]  # Bark Token
+BarkServer = os.environ["BarkServer"]  # BarkServer
 
 # plus推送配置
-PlusPush = ''  # plus push token
+PlusPush = os.environ["PlusPush"]  # plus push token
 
 # 企业微信推送
-EwechatPushToken = ''
-EwechatAgentId = ''
-EwechatAppSecrets = ''
+EwechatPushToken = os.environ["EwechatPushToken"]
+EwechatAgentId = os.environ["EwechatAgentId"]
+EwechatAppSecrets = os.environ["EwechatAppSecrets"]
 
 
 def get_code_uuid():
