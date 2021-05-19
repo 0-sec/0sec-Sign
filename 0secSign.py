@@ -31,7 +31,7 @@ FTSERVERKEY = os.environ["FTSERVERKEY"]  # 方糖 Server酱申请的skey
 # Telegram推送配置
 TELEGRAMTOKEN = os.environ["TELEGRAMTOKEN"]  # telegram token
 TELEGRAMCHADID = os.environ["TELEGRAMCHADID"]  # telegram token
-
+ 
 # Bark推送配置
 BARKTOKEN = os.environ["BARKTOKEN"]  # Bark Token
 BARKSERVER = os.environ["BARKSERVER"]  # BarkServer
