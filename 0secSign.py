@@ -11,8 +11,8 @@ base64_uuid = ''
 VcUser = ''
 VcPass = ''
 #文库账号密码
-0secWikiUser = ''
-0secWikiPass = ''
+ZsecWikiUser = ''
+ZsecWikiPass = ''
 
 
 # 推送类型
