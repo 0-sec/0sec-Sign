@@ -13,7 +13,7 @@ VCUSER  = os.environ["VCUSER"]
 VCPASS  = os.environ["VCPASS"]
 
 #文库账号密码
-ZSERCIKIUSER  = os.environ["ZSERCIKIUSER"]
+ZSECWIKIUSER  = os.environ["ZSECWIKIUSER"]
 
 ZSECWIKIPASS  = os.environ["ZSECWIKIPASS"]
 
