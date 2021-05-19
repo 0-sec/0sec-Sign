@@ -24,30 +24,30 @@ jobs:
          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Get Setting
       run: |
-        pushType:${{secrets.pushType}}
-        DingtalkAccessToken:${{secrets.DingtalkAccessToken}}
-        FTServerKey:${{secrets.FTServerKey}}
-        TelegramToken:${{secrets.TelegramToken}}
-        TelegramChadId:${{secrets.TelegramChadId}}
-        BarkToken:${{secrets.BarkToken}}
-        BarkServer:${{secrets.BarkServer}}
-        PlusPush:${{secrets.PlusPush}}
-        EwechatPushToken:${{secrets.EwechatPushToken}}
-        EwechatAgentId:${{secrets.EwechatAgentId}}
-        EwechatAppSecrets:${{secrets.EwechatAppSecrets}}
-        VcUser:${{secrets.VcUser}}
-        VcPass:${{secrets.VcPass}}
-        ZsecWikiUser:${{secrets.ZsecWikiUser}}
-        ZsecWikiPass:${{secrets.ZsecWikiPass}}
+        PUSHTYPE:${{secrets.PUSHTYPE}}
+        DINGTALKACCESSTOKEN:${{secrets.DINGTALKACCESSTOKEN}}
+        FTSERVERKEY:${{secrets.FTSERVERKEY}}
+        TELEGRAMTOKEN:${{secrets.TELEGRAMTOKEN}}
+        TELEGRAMCHADID:${{secrets.TELEGRAMCHADID}}
+        BARKTOKEN:${{secrets.BARKTOKEN}}
+        BARKSERVER:${{secrets.BARKSERVER}}
+        PLUSPUSH:${{secrets.PLUSPUSH}}
+        EWECHATPUSHTOKEN:${{secrets.EWECHATPUSHTOKEN}}
+        EWECHATAGENTID:${{secrets.EWECHATAGENTID}}
+        EWECHATAPPSECRETS:${{secrets.EWECHATAPPSECRETS}}
+        VCUSER:${{secrets.VCUSER}}
+        VCPASS:${{secrets.VCPASS}}
+        ZSERCIKIUSER:${{secrets.ZSERCIKIUSER}}
+        ZSECWIKIPASS:${{secrets.ZSECWIKIPASS}}
     - name: Run
       run: |
        if [ ${FTServerKey}]; then FTServerKey= $FTServerKey ;fi
        if [ ${TelegramToken}]; then TelegramToken= $TelegramToken ;fi
        if [ ${TelegramChadId}]; then TelegramChadId= $TelegramChadId ;fi
-       if [ ${BarkToken}]; then BarkToken= $BarkToken ;fi
-       if [ ${BarkServer}]; then BarkServer= $BarkServer ;fi
-       if [ ${PlusPush}]; then PlusPush= $PlusPush ;fi
-       if [ ${EwechatPushToken}]; then EwechatPushToken= $EwechatPushToken ;fi
-       if [ ${EwechatAgentId}]; then EwechatAgentId = $EwechatAgentId ;fi
-       if [ ${EwechatAppSecrets}]; then EwechatAppSecrets= $EwechatAppSecrets ;fi
+       if [ ${BARKTOKEN}]; then BARKTOKEN= $BARKTOKEN ;fi
+       if [ ${BARKSERVER}]; then BARKSERVER= $BARKSERVER ;fi
+       if [ ${PLUSPUSH}]; then PLUSPUSH= $PLUSPUSH ;fi
+       if [ ${EWECHATPUSHTOKEN}]; then EWECHATPUSHTOKEN= $EWECHATPUSHTOKEN ;fi
+       if [ ${EWECHATAGENTID}]; then EWECHATAGENTID = $EWECHATAGENTID ;fi
+       if [ ${EWECHATAPPSECRETS}]; then EWECHATAPPSECRETS= $EWECHATAPPSECRETS ;fi
        python3 0secSign.py
