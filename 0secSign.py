@@ -7,6 +7,14 @@ import json
 base64_image = ''
 base64_uuid = ''
 
+#验证码账号密码http://api.ttshitu.com
+VcUser = ''
+VcPass = ''
+#文库账号密码
+0sWU = ''
+0sWP = ''
+
+
 # 推送类型
 pushType = ''  # telegram|ftpush|bark|enterprise_wechat|dingtalk
 
@@ -46,7 +54,7 @@ def get_code_uuid():
 def base64_api():
     global base64_image, base64_uuid
     b64 = base64_image
-    data = {"username": "", "password": "", "image": b64}  ##你的验证码api账户，需要去ttshitu.com打码平台注册充值
+    data = {"username": VcUser, "password": VcPass, "image": b64}  ##你的验证码api账户，需要去ttshitu.com打码平台注册充值
     result = json.loads(requests.post("http://api.ttshitu.com/base64", json=data).text)
     if result['success']:
         return result["data"]["result"]
