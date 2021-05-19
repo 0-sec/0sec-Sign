@@ -41,13 +41,4 @@ jobs:
         ZSECWIKIPASS:${{secrets.ZSECWIKIPASS}}
     - name: Run
       run: |
-       if [ ${FTServerKey}]; then FTServerKey= $FTServerKey ;fi
-       if [ ${TelegramToken}]; then TelegramToken= $TelegramToken ;fi
-       if [ ${TelegramChadId}]; then TelegramChadId= $TelegramChadId ;fi
-       if [ ${BARKTOKEN}]; then BARKTOKEN= $BARKTOKEN ;fi
-       if [ ${BARKSERVER}]; then BARKSERVER= $BARKSERVER ;fi
-       if [ ${PLUSPUSH}]; then PLUSPUSH= $PLUSPUSH ;fi
-       if [ ${EWECHATPUSHTOKEN}]; then EWECHATPUSHTOKEN= $EWECHATPUSHTOKEN ;fi
-       if [ ${EWECHATAGENTID}]; then EWECHATAGENTID = $EWECHATAGENTID ;fi
-       if [ ${EWECHATAPPSECRETS}]; then EWECHATAPPSECRETS= $EWECHATAPPSECRETS ;fi
        python3 0secSign.py
