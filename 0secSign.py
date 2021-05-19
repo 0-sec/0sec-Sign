@@ -113,7 +113,7 @@ def sign(token):
         elif PUSHTYPE == 'enterprise_wechat':
             wecom_id_push(EWECHATPUSHTOKEN , EWECHATAGENTID ,EWECHATAPPSECRETS ,datamsg)
         elif PUSHTYPE == 'dingtalk':
-            dingtalk_push(EWECHATPUSHTOKEN ,datamsg)
+            dingtalk_push(DINGTALKACCESSTOKEN ,datamsg)
 
 
 # Server Chan Turbo Push
