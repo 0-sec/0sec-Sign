@@ -21,6 +21,7 @@ jobs:
     - name: Install dependencies
       run: |
          python -m pip install --upgrade pip
+         pip install 
          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Get Setting
       run: |
@@ -39,6 +40,5 @@ jobs:
         VCPASS:${{secrets.VCPASS}}
         ZSERCIKIUSER:${{secrets.ZSERCIKIUSER}}
         ZSECWIKIPASS:${{secrets.ZSECWIKIPASS}}
-    - name: Run
-      run: |
-       python3 0secSign.py
+        python3 0secSign.py
+ 
