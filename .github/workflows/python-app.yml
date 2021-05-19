@@ -37,8 +37,17 @@ jobs:
         EwechatAppSecrets:${{secrets.EwechatAppSecrets}}
         VcUser:${{secrets.VcUser}}
         VcPass:${{secrets.VcPass}}
-        0secWiikUser:${{secrets.0secWiikUser}}
-        0secWiikPass:${{secrets.0secWiikPass}}
+        0secWikiUser:${{secrets.0secWiikUser}}
+        0secWikiPass:${{secrets.0secWiikPass}}
     - name: Run
       run: |
-        python3 0secSign.py
+       if [ ${FTServerKey}]; then FTServerKey= $FTServerKey ;fi
+       if [ ${TelegramToken}]; then TelegramToken= $TelegramToken ;fi
+       if [ ${TelegramChadId}]; then TelegramChadId= $TelegramChadId ;fi
+       if [ ${BarkToken}]; then BarkToken= $BarkToken ;fi
+       if [ ${BarkServer}]; then BarkServer= $BarkServer ;fi
+       if [ ${PlusPush}]; then PlusPush= $PlusPush ;fi
+       if [ ${EwechatPushToken}]; then EwechatPushToken= $EwechatPushToken ;fi
+       if [ ${EwechatAgentId}]; then EwechatAgentId = $EwechatAgentId ;fi
+       if [ ${EwechatAppSecrets}]; then EwechatAppSecrets= $EwechatAppSecrets ;fi
+       python3 0secSign.py
