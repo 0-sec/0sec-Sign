@@ -4,7 +4,7 @@
 name: 零组文库签到
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 0 8 * * ?"
   workflow_dispatch:
 
 jobs:
