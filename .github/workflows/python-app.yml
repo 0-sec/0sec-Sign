@@ -37,7 +37,7 @@ jobs:
           EWECHATAPPSECRETS: ${{secrets.EWECHATAPPSECRETS}}
           VCUSER: ${{secrets.VCUSER}}
           VCPASS: ${{secrets.VCPASS}}
-          ZSERCIKIUSER: ${{secrets.ZSERCIKIUSER}}
+          ZSECWIKIUSER: ${{secrets.ZSECWIKIUSER}}
           ZSECWIKIPASS: ${{secrets.ZSECWIKIPASS}} 
         run: |
           python3 0secSign.py
