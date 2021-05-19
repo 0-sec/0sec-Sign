@@ -37,8 +37,8 @@ jobs:
         EwechatAppSecrets:${{secrets.EwechatAppSecrets}}
         VcUser:${{secrets.VcUser}}
         VcPass:${{secrets.VcPass}}
-        0secWikiUser:${{secrets.0secWiikUser}}
-        0secWikiPass:${{secrets.0secWiikPass}}
+        ZsecWikiUser:${{secrets.0secWiikUser}}
+        ZsecWikiPass:${{secrets.0secWiikPass}}
     - name: Run
       run: |
        if [ ${FTServerKey}]; then FTServerKey= $FTServerKey ;fi
