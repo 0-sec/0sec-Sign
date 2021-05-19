@@ -9,40 +9,40 @@ base64_image = ''
 base64_uuid = ''
 
 #验证码账号密码http://api.ttshitu.com
-VcUser  = os.environ["VcUser"]
-VcPass  = os.environ["VcPass"]
+VCUSER  = os.environ["VCUSER"]
+VCPASS  = os.environ["VCPASS"]
 
 #文库账号密码
-ZsecWikiUser  = os.environ["ZsecWikiUser"]
+ZSERCIKIUSER  = os.environ["ZSERCIKIUSER"]
 
-ZsecWikiPass  = os.environ["ZsecWikiPass"]
+ZSECWIKIPASS  = os.environ["ZSECWIKIPASS"]
 
 
 # 推送类型
-pushType  = os.environ["pushType"]  # telegram|ftpush|bark|enterprise_wechat|dingtalk
+PUSHTYPE  = os.environ["PUSHTYPE"]  # telegram|ftpush|bark|enterprise_wechat|dingtalk
 
 # 钉钉推送
-DingtalkAccessToken = os.environ["DingtalkAccessToken"]  # 创建webhook机器人时的access_token
+DINGTALKACCESSTOKEN = os.environ["DINGTALKACCESSTOKEN"]  # 创建webhook机器人时的access_token
 
 
 # 方糖推送
-FTServerKey = os.environ["FTServerKey"]  # 方糖 Server酱申请的skey
+FTSERVERKEY = os.environ["FTSERVERKEY"]  # 方糖 Server酱申请的skey
 
 # Telegram推送配置
-TelegramToken = os.environ["TelegramToken"]  # telegram token
-TelegramChadId = os.environ["TelegramChadId"]  # telegram token
+TELEGRAMTOKEN = os.environ["TELEGRAMTOKEN"]  # telegram token
+TELEGRAMCHADID = os.environ["TELEGRAMCHADID"]  # telegram token
 
 # Bark推送配置
-BarkToken = os.environ["BarkToken"]  # Bark Token
-BarkServer = os.environ["BarkServer"]  # BarkServer
+BARKTOKEN = os.environ["BARKTOKEN"]  # Bark Token
+BARKSERVER = os.environ["BARKSERVER"]  # BarkServer
 
 # plus推送配置
-PlusPush = os.environ["PlusPush"]  # plus push token
+PLUSPUSH = os.environ["PLUSPUSH"]  # plus push token
 
 # 企业微信推送
-EwechatPushToken = os.environ["EwechatPushToken"]
-EwechatAgentId = os.environ["EwechatAgentId"]
-EwechatAppSecrets = os.environ["EwechatAppSecrets"]
+EWECHATPUSHTOKEN = os.environ["EWECHATPUSHTOKEN"]
+EWECHATAGENTID = os.environ["EWECHATAGENTID"]
+EWECHATAPPSECRETS = os.environ["EWECHATAPPSECRETS"]
 
 
 def get_code_uuid():
@@ -57,7 +57,7 @@ def get_code_uuid():
 def base64_api():
     global base64_image, base64_uuid
     b64 = base64_image
-    data = {"username": VcUser, "password": VcPass, "image": b64}  ##你的验证码api账户，需要去ttshitu.com打码平台注册充值
+    data = {"username": VCUSER, "password": VCPASS, "image": b64}  ##你的验证码api账户，需要去ttshitu.com打码平台注册充值
     result = json.loads(requests.post("http://api.ttshitu.com/base64", json=data).text)
     if result['success']:
         return result["data"]["result"]
@@ -66,8 +66,8 @@ def base64_api():
 
 
 def login(uuid):
-    username = ZsecWikiUser  #文库账号
-    password = ZsecWikiPass  #文库密码
+    username = ZSERCIKIUSER  #文库账号
+    password = ZSECWIKIPASS  #文库密码
     headers = {'Accept': 'application/json, text/plain, */*',
                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36',
                'Content-Type': 'application/json;charset=UTF-8', 'Accept-Encoding': 'gzip, deflate',
