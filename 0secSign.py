@@ -63,8 +63,8 @@ def base64_api():
 
 
 def login(uuid):
-    username = 0secWikiUser  #文库账号
-    password = 0secWikiPass  #文库密码
+    username = ZsecWikiUser  #文库账号
+    password = ZsecWikiPass  #文库密码
     headers = {'Accept': 'application/json, text/plain, */*',
                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36',
                'Content-Type': 'application/json;charset=UTF-8', 'Accept-Encoding': 'gzip, deflate',
