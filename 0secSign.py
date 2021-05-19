@@ -102,18 +102,18 @@ def sign(token):
         print("兄弟，你已经签到过了，你的积分为：", new_sign_data_credit)
         datamsg = "0sec文库签到失败！您的当前积分为：{0}".format(str(new_sign_data_credit))
     if datamsg:
-        if pushType == 'ftpush':
-            server_chan_push(FTServerKey, datamsg)
-        elif pushType == 'telegram':
-            telegram_push(TelegramToken, TelegramChadId,  datamsg)
-        elif pushType == 'bark':
-            bark_push(BarkToken, BarkServer, datamsg)
-        elif pushType == 'push_plus_push':
-            push_plus_push(PlusPush, datamsg)
-        elif pushType == 'enterprise_wechat':
-            wecom_id_push(EwechatPushToken, EwechatAgentId,EwechatAppSecrets,datamsg)
-        elif pushType == 'dingtalk':
-            dingtalk_push(DingtalkAccessToken,datamsg)
+        if PUSHTYPE == 'FTPUSH':
+            server_chan_push(FTSERVERKEY, datamsg)
+        elif PUSHTYPE == 'telegram':
+            telegram_push(TELEGRAMTOKEN , TELEGRAMCHADID ,  datamsg)
+        elif PUSHTYPE == 'bark':
+            bark_push(BARKTOKEN , BARKSERVER , datamsg)
+        elif PUSHTYPE == 'push_plus_push':
+            push_plus_push(PLUSPUSH , datamsg)
+        elif PUSHTYPE == 'enterprise_wechat':
+            wecom_id_push(EWECHATPUSHTOKEN , EWECHATAGENTID ,EWECHATAPPSECRETS ,datamsg)
+        elif PUSHTYPE == 'dingtalk':
+            dingtalk_push(EWECHATPUSHTOKEN ,datamsg)
 
 
 # Server Chan Turbo Push
