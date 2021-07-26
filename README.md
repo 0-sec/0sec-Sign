@@ -59,7 +59,7 @@
 
 ### 2. 新建函数
 
-新建方式选自定义创建，名称地域随意，运行环境python3.6
+新建方式选自定义创建，名称地域随意，运行环境python3.6,设置超时时间。
 
 ![Pasted image 20210519155422](https://github.com/l1angfeng/0sec-Sign/blob/main/Readme/images/Pasted%20image%2020210519155422.png)
 
