@@ -14,9 +14,9 @@
 
 -   创建`ZSECWIKIPASS`,填入文库密码(**必填**)
 
--   创建`VCUSER`,填入验证码平台账号(**必填**)
+-   创建`VCUSER`,填入验证码平台账号(**必填**)注册地址：ttshitu.com
 
--   创建`VCPASS`,填入验证码平台账号(**必填**)
+-   创建`VCPASS`,填入验证码平台密码(**必填**)
 
 -   创建`PUSHTYPE`,填入选择的推送渠道(可选)(dingtalk|telegram|ftpush|bark|enterprise\_wechat)(可选)
 
