@@ -8,7 +8,7 @@
 
 ### 1. Fork该仓库
 
-### 2. 创建Secrets
+### 2. 创建Secrets,路径：Settings-Secrets-New repository secret
 
 -   创建`ZSECWIKIUSER`,填入文库账号(**必填**)
 
